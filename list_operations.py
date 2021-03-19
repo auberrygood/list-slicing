@@ -65,7 +65,7 @@ def first_three(input_list):
     return input_list[:3]
 
 
-def last_five(input_list):
+def lapst_five(input_list):
     """Return the last five elements of the input list.
 
     For example:

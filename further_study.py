@@ -45,8 +45,9 @@ def custom_append(input_list, value):
         True
 
     """
-
-    pass
+    input_list[-1:] = [input_list[-1], value]
+    # print(input_list)
+    # pass[]
 
 
 def custom_extend(input_list, second_list):
@@ -64,8 +65,9 @@ def custom_extend(input_list, second_list):
         True
 
     """
-
-    pass
+    for month in second_list:
+        input_list[-1:] = [input_list[-1], month]
+    # pass
 
 
 def custom_insert(input_list, index, value):
