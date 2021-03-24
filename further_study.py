@@ -156,8 +156,11 @@ def custom_count(input_list, value):
         2
 
     """
-
-    return 0
+    counter = 0
+    for input in input_list:
+        if input == value:
+            counter += 1
+    return counter
 
 
 def custom_reverse(input_list):
@@ -175,9 +178,16 @@ def custom_reverse(input_list):
         True
 
     """
+    list_length = custom_len(input_list)
+    stop_point = int(list_length / 2) - 1
 
-    pass
-
+    last_i = -1
+    for i, input in enumerate(input_list):
+        input_list[i], input_list[last_i] = input_list[last_i], input_list[i]
+        last_i -= 1
+        # print(input_list)
+        if i >= stop_point:
+           break
 
 def custom_contains(input_list, value):
     """Return True or False if value is in the input_list.
